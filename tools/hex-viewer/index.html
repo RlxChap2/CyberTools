@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <title>CyberTools - Hex Viewer Online</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <!-- SEO Meta -->
+        <meta name="description" content="Free online Hex Viewer: Upload any file and view its hexadecimal and ASCII representation directly in your browser." />
+        <meta name="keywords" content="cybersecurity, hex viewer, online hex editor, file inspector, cybersecurity tools" />
+        <meta name="author" content="RlxChap2" />
+
+        <!-- Open Graph -->
+        <meta property="og:title" content="CyberTools - Hex Viewer Online" />
+        <meta property="og:description" content="Free online tool to inspect files in Hexadecimal and ASCII format." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://github.com/RlxChap2/CyberTools" />
+        <meta property="og:image" content="https://github.com/RlxChap2/CyberTools" />
+
+        <!-- TailwindCSS -->
+        <script src="https://cdn.tailwindcss.com"></script>
+        <style>
+            .hex-cell,
+            .ascii-cell {
+                cursor: pointer;
+                padding: 2px 4px;
+            }
+            .highlight {
+                background-color: #bfdbfe; /* Tailwind blue-200 */
+            }
+        </style>
+    </head>
+    <body class="bg-gray-50 text-gray-900 font-sans">
+        <!-- Header -->
+        <header class="bg-white shadow-sm sticky top-0 z-50">
+            <div class="max-w-6xl mx-auto flex justify-between items-center p-4">
+                <a href="/"><h1 class="text-xl font-bold text-blue-700">CyberTools</h1></a>
+                <nav class="space-x-2">
+                    <a href="../steganography/index.html" class="px-3 py-1 rounded-md text-gray-600 hover:bg-gray-100">Steganography</a>
+                    <a href="../hash-tools/index.html" class="px-3 py-1 rounded-md text-gray-600 hover:bg-gray-100">Hash Tools</a>
+                    <a href="../encoding-utils/index.html" class="px-3 py-1 rounded-md text-gray-600 hover:bg-gray-100">Base64</a>
+                    <a href="../jwt-decoder/index.html" class="px-3 py-1 rounded-md text-gray-600 hover:bg-gray-100">JWT Decoder</a>
+                    <a href="../hex-viewer/index.html" class="px-3 py-1 rounded-md text-blue-600 font-semibold">Hex Viewer</a>
+                </nav>
+            </div>
+        </header>
+
+        <!-- Main -->
+        <main class="max-w-6xl mx-auto p-6">
+            <section>
+                <h2 class="text-2xl font-semibold mb-6">Hex Viewer Tool</h2>
+
+                <!-- Upload -->
+                <div class="p-5 bg-white border rounded-xl shadow-sm mb-6">
+                    <h3 class="font-medium text-lg mb-3">Upload a File</h3>
+                    <input type="file" id="fileInput" class="mb-3 block text-sm" />
+                    <button id="viewBtn" class="w-full bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg">View in Hex</button>
+                </div>
+
+                <!-- Output -->
+                <div class="p-5 bg-white border rounded-xl shadow-sm overflow-auto max-h-[600px]">
+                    <h3 class="font-medium text-lg mb-3">Hex Output</h3>
+                    <table class="text-xs font-mono w-full border-collapse">
+                        <thead class="bg-gray-100 sticky top-0">
+                            <tr>
+                                <th class="px-2 py-1 text-left">Offset</th>
+                                <th class="px-2 py-1 text-left">Hex</th>
+                                <th class="px-2 py-1 text-left">ASCII</th>
+                            </tr>
+                        </thead>
+                        <tbody id="hexTable"></tbody>
+                    </table>
+                </div>
+            </section>
+        </main>
+
+        <!-- Script -->
+        <script src="script.js"></script>
+    </body>
+</html>
