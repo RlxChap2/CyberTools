@@ -4,18 +4,19 @@
         <meta charset="UTF-8" />
         <title>CyberTools - Steganography Online</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="shortcut icon" href="../../assets/logowb.png" type="image/x-icon" />
 
         <!-- SEO Meta -->
-        <meta name="description" content="Free open-source cybersecurity tools: Steganography, Hash Tools, Base64 Utilities, JWT Decoder, and Hex Viewer." />
-        <meta name="keywords" content="cybersecurity tools, steganography, hash tools, base64 decode, jwt decoder, hex viewer, online" />
+        <meta name="description" content="Free online Steganography tool: hide secret messages inside images or decode hidden text. Simple, secure, and open-source." />
+        <meta name="keywords" content="steganography, hide message in image, decode hidden text, online tool, cybersecurity" />
         <meta name="author" content="RlxChap2" />
 
         <!-- Open Graph -->
-        <meta property="og:title" content="Cyber Tools - Steganography Online" />
-        <meta property="og:description" content="Free cybersecurity tools like Steganography, Hash Tools, Base64, JWT Decoder, and Hex Viewer." />
+        <meta property="og:title" content="CyberTools - Steganography Tool" />
+        <meta property="og:description" content="Hide messages inside images or decode hidden text online with CyberTools Steganography." />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://github.com/RlxChap2/CyberTools" />
-        <meta property="og:image" content="https://github.com/RlxChap2/CyberTools" />
+        <meta property="og:url" content="https://github.com/RlxChap2/CyberTools/steganography" />
+        <meta property="og:image" content="https://github.com/RlxChap2/CyberTools/logo.png" />
 
         <!-- TailwindCSS -->
         <script src="https://cdn.tailwindcss.com"></script>
@@ -24,7 +25,7 @@
         <!-- Header -->
         <header class="bg-white shadow-sm sticky top-0 z-50">
             <div class="max-w-6xl mx-auto flex justify-between items-center p-4">
-                <a href="/"><h1 class="text-xl font-bold text-blue-700">CyberTools</h1></a>
+                <a href="/CyberTools"><h1 class="text-xl font-bold text-blue-700">CyberTools</h1></a>
                 <nav class="space-x-2">
                     <a href="../steganography/index.html" class="px-3 py-1 rounded-md text-gray-600 hover:bg-gray-100">Steganography</a>
                     <a href="../hash-tools/index.html" class="px-3 py-1 rounded-md text-gray-600 hover:bg-gray-100">Hash Tools</a>
@@ -38,30 +39,21 @@
         <!-- Main Content -->
         <main class="max-w-6xl mx-auto p-6 space-y-10">
             <!-- Steganography Tool -->
-            <section id="tab-steg" class="tab-content">
+            <section id="tab-steg">
                 <h2 class="text-2xl font-semibold mb-6">Steganography Tool</h2>
-
-                <!-- Alerts -->
-                <div class="space-y-4 mb-6">
-                    <div class="flex items-start p-4 text-sm text-yellow-800 border border-yellow-300 rounded-lg bg-yellow-50" role="alert">
-                        <svg class="shrink-0 w-5 h-5 mt-0.5 mr-3 text-yellow-500" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
-                            <path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5ZM9.5 4a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3ZM12 15H8a1 1 0 0 1 0-2h1v-3H8a1 1 0 0 1 0-2h2a1 1 0 0 1 1 1v4h1a1 1 0 0 1 0 2Z" />
-                        </svg>
-                        <p><span class="font-medium">Encoding:</span> Choose an image, enter your text, then click <strong>Encode</strong>. Larger messages need bigger images.</p>
-                    </div>
-
-                    <div class="flex items-start p-4 text-sm text-yellow-800 border border-yellow-300 rounded-lg bg-yellow-50" role="alert">
-                        <svg class="shrink-0 w-5 h-5 mt-0.5 mr-3 text-yellow-500" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
-                            <path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5ZM9.5 4a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3ZM12 15H8a1 1 0 0 1 0-2h1v-3H8a1 1 0 0 1 0-2h2a1 1 0 0 1 1 1v4h1a1 1 0 0 1 0 2Z" />
-                        </svg>
-                        <p><span class="font-medium">Decoding:</span> Upload an image and click <strong>Decode</strong> to reveal any hidden message.</p>
-                    </div>
-                </div>
 
                 <!-- Tools Grid -->
                 <div class="grid md:grid-cols-2 gap-6">
                     <!-- Encode -->
                     <div class="p-5 bg-white border rounded-xl shadow-sm">
+                        <!-- Alert Encode -->
+                        <div class="flex items-start p-4 mb-4 text-sm text-yellow-800 border border-yellow-300 rounded-lg bg-yellow-50" role="alert">
+                            <svg class="shrink-0 w-5 h-5 mt-0.5 mr-3 text-yellow-500" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5ZM9.5 4a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3ZM12 15H8a1 1 0 0 1 0-2h1v-3H8a1 1 0 0 1 0-2h2a1 1 0 0 1 1 1v4h1a1 1 0 0 1 0 2Z" />
+                            </svg>
+                            <p><span class="font-medium">Encoding:</span> Choose an image, enter your text, then click <strong>Encode</strong>. Larger messages need bigger images.</p>
+                        </div>
+
                         <h3 class="font-medium text-lg mb-3">Encode</h3>
                         <input type="file" id="encodeImage" class="mb-3 block text-sm" />
                         <canvas id="encodeCanvas" class="border rounded mb-3 w-full"></canvas>
@@ -72,6 +64,14 @@
 
                     <!-- Decode -->
                     <div class="p-5 bg-white border rounded-xl shadow-sm">
+                        <!-- Alert Decode -->
+                        <div class="flex items-start p-4 mb-4 text-sm text-yellow-800 border border-yellow-300 rounded-lg bg-yellow-50" role="alert">
+                            <svg class="shrink-0 w-5 h-5 mt-0.5 mr-3 text-yellow-500" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5ZM9.5 4a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3ZM12 15H8a1 1 0 0 1 0-2h1v-3H8a1 1 0 0 1 0-2h2a1 1 0 0 1 1 1v4h1a1 1 0 0 1 0 2Z" />
+                            </svg>
+                            <p><span class="font-medium">Decoding:</span> Upload an image and click <strong>Decode</strong> to reveal any hidden message.</p>
+                        </div>
+
                         <h3 class="font-medium text-lg mb-3">Decode</h3>
                         <input type="file" id="decodeImage" class="mb-3 block text-sm" />
                         <canvas id="decodeCanvas" class="border rounded mb-3 w-full"></canvas>
@@ -81,24 +81,6 @@
                 </div>
             </section>
         </main>
-
-        <!-- Tab Script -->
-        <script>
-            const tabs = document.querySelectorAll('.tab-btn');
-            const contents = document.querySelectorAll('.tab-content');
-
-            tabs.forEach((tab) => {
-                tab.addEventListener('click', () => {
-                    tabs.forEach((t) => t.classList.remove('bg-blue-100', 'text-blue-700', 'font-semibold'));
-                    tab.classList.add('bg-blue-100', 'text-blue-700', 'font-semibold');
-
-                    contents.forEach((c) => c.classList.add('hidden'));
-                    document.getElementById('tab-' + tab.dataset.tab).classList.remove('hidden');
-                });
-            });
-
-            tabs[0].classList.add('bg-blue-100', 'text-blue-700', 'font-semibold');
-        </script>
 
         <!-- Steg Script -->
         <script src="script.js"></script>
