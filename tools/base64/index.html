@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <title>CyberTools - Base64 Encoder/Decoder Online</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="shortcut icon" href="../../assets/logowb.png" type="image/x-icon" />
+
+        <!-- SEO Meta -->
+        <meta name="description" content="Free online Base64 Encoder/Decoder: Encode or decode text to/from Base64 instantly in your browser. Fast, simple, and open-source." />
+        <meta name="keywords" content="base64, online encoder, decoder, encode text, decode text, cybersecurity tools" />
+        <meta name="author" content="RlxChap2" />
+
+        <!-- Open Graph -->
+        <meta property="og:title" content="CyberTools - Base64 Encoder/Decoder Online" />
+        <meta property="og:description" content="Encode or decode text to/from Base64 directly in your browser with CyberTools Base64 tool." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://rlxchap2.github.io/CyberTools/tools/base64/index.html" />
+        <meta property="og:image" content="https://rlxchap2.github.io/CyberTools/assets/logowb.png" />
+
+        <!-- TailwindCSS -->
+        <script src="https://cdn.tailwindcss.com"></script>
+    </head>
+    <body class="bg-gray-50 text-gray-900 font-sans">
+        <!-- Header -->
+        <header class="bg-white shadow-sm sticky top-0 z-50">
+            <div class="max-w-6xl mx-auto flex justify-between items-center p-4">
+                <a href="/CyberTools"><h1 class="text-xl font-bold text-blue-700">CyberTools</h1></a>
+                <nav class="space-x-2">
+                    <a href="../steganography/index.html" class="px-3 py-1 rounded-md text-gray-600 hover:bg-gray-100">Steganography</a>
+                    <a href="./index.html" class="px-3 py-1 rounded-md text-blue-600 font-semibold">Base64</a>
+                    <a href="../jwt-decoder/index.html" class="px-3 py-1 rounded-md text-gray-600 hover:bg-gray-100">JWT Decoder</a>
+                    <a href="../hex-viewer/index.html" class="px-3 py-1 rounded-md text-gray-600 hover:bg-gray-100">Hex Viewer</a>
+                    <a href="../rc4/index.html" class="px-3 py-1 rounded-md text-gray-600 hover:bg-gray-100">RC4</a>
+                </nav>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="max-w-6xl mx-auto p-6 space-y-10">
+            <section>
+                <h2 class="text-2xl font-semibold mb-6">Base64 Encoder / Decoder</h2>
+
+                <div class="grid md:grid-cols-2 gap-6">
+                    <!-- Encode -->
+                    <div class="p-5 bg-white border rounded-xl shadow-sm">
+                        <h3 class="font-medium text-lg mb-3">Encode Text to Base64</h3>
+                        <textarea id="encodeText" class="w-full border p-2 rounded mb-3 text-sm" rows="5" placeholder="Enter text to encode..."></textarea>
+                        <button id="encodeBtn" class="w-full bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg">Encode</button>
+                        <textarea id="encodedResult" class="w-full border p-2 rounded mt-3 text-sm" rows="5" readonly placeholder="Base64 result will appear here..."></textarea>
+                    </div>
+
+                    <!-- Decode -->
+                    <div class="p-5 bg-white border rounded-xl shadow-sm">
+                        <h3 class="font-medium text-lg mb-3">Decode Base64 to Text</h3>
+                        <textarea id="decodeText" class="w-full border p-2 rounded mb-3 text-sm" rows="5" placeholder="Enter Base64 string..."></textarea>
+                        <button id="decodeBtn" class="w-full bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded-lg">Decode</button>
+                        <textarea id="decodedResult" class="w-full border p-2 rounded mt-3 text-sm" rows="5" readonly placeholder="Decoded text will appear here..."></textarea>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Script -->
+        <script src="script.js"></script>
+    </body>
+</html>

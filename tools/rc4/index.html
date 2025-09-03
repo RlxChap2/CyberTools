@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <title>CyberTools - RC4 Encryption/Decryption Online</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="shortcut icon" href="../../assets/logowb.png" type="image/x-icon" />
+
+        <!-- SEO Meta -->
+        <meta name="description" content="Free online RC4 Encryption/Decryption tool: Encrypt or decrypt text with RC4 securely in your browser." />
+        <meta name="keywords" content="RC4, encryption, decryption, online RC4 tool, cybersecurity, secure text" />
+        <meta name="author" content="RlxChap2" />
+
+        <!-- Open Graph -->
+        <meta property="og:title" content="CyberTools - RC4 Encryption/Decryption Online" />
+        <meta property="og:description" content="Encrypt or decrypt text using RC4 directly in your browser with CyberTools RC4 tool." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://rlxchap2.github.io/CyberTools/tools/rc4/index.html" />
+        <meta property="og:image" content="https://rlxchap2.github.io/CyberTools/assets/logowb.png" />
+
+        <!-- TailwindCSS -->
+        <script src="https://cdn.tailwindcss.com"></script>
+    </head>
+    <body class="bg-gray-50 text-gray-900 font-sans">
+        <!-- Header -->
+        <header class="bg-white shadow-sm sticky top-0 z-50">
+            <div class="max-w-6xl mx-auto flex justify-between items-center p-4">
+                <a href="/CyberTools"><h1 class="text-xl font-bold text-blue-700">CyberTools</h1></a>
+                <nav class="space-x-2">
+                    <a href="../steganography/index.html" class="px-3 py-1 rounded-md text-gray-600 hover:bg-gray-100">Steganography</a>
+                    <a href="../base64/index.html" class="px-3 py-1 rounded-md text-gray-600 hover:bg-gray-100">Base64</a>
+                    <a href="../jwt-decoder/index.html" class="px-3 py-1 rounded-md text-gray-600 hover:bg-gray-100">JWT Decoder</a>
+                    <a href="../hex-viewer/index.html" class="px-3 py-1 rounded-md text-gray-600 hover:bg-gray-100">Hex Viewer</a>
+                    <a href="./index.html" class="px-3 py-1 rounded-md text-blue-600 font-semibold">RC4</a>
+                </nav>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="max-w-6xl mx-auto p-6 space-y-10">
+            <section>
+                <h2 class="text-2xl font-semibold mb-6">RC4 Encryption / Decryption Tool</h2>
+
+                <div class="grid md:grid-cols-2 gap-6">
+                    <!-- Encrypt -->
+                    <div class="p-5 bg-white border rounded-xl shadow-sm">
+                        <h3 class="font-medium text-lg mb-3">Encrypt Text</h3>
+                        <textarea id="rc4EncryptInput" class="w-full border p-2 rounded mb-3 text-sm" rows="5" placeholder="Enter text to encrypt..."></textarea>
+                        <input type="text" id="rc4EncryptKey" class="w-full border p-2 rounded mb-3 text-sm" placeholder="Enter encryption key..." />
+                        <button id="rc4EncryptBtn" class="w-full bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg">Encrypt</button>
+                        <textarea id="rc4EncryptedResult" class="w-full border p-2 rounded mt-3 text-sm" rows="5" readonly placeholder="Encrypted result will appear here..."></textarea>
+                    </div>
+
+                    <!-- Decrypt -->
+                    <div class="p-5 bg-white border rounded-xl shadow-sm">
+                        <h3 class="font-medium text-lg mb-3">Decrypt Text</h3>
+                        <textarea id="rc4DecryptInput" class="w-full border p-2 rounded mb-3 text-sm" rows="5" placeholder="Enter encrypted text (Base64)..."></textarea>
+                        <input type="text" id="rc4DecryptKey" class="w-full border p-2 rounded mb-3 text-sm" placeholder="Enter decryption key..." />
+                        <button id="rc4DecryptBtn" class="w-full bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded-lg">Decrypt</button>
+                        <textarea id="rc4DecryptedResult" class="w-full border p-2 rounded mt-3 text-sm" rows="5" readonly placeholder="Decrypted text will appear here..."></textarea>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- RC4 Script -->
+        <script src="script.js"></script>
+    </body>
+</html>
