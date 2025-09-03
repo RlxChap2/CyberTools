@@ -2,71 +2,106 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8" />
-        <title>CyberTools</title>
+        <title>CyberTools - Free Cybersecurity Tools</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="shortcut icon" href="./assets/logowb.png" type="image/x-icon" />
 
-        <!-- SEO Meta -->
-        <meta name="description" content="Free open-source cybersecurity tools: Steganography, Hash Tools, Base64 Utilities, JWT Decoder, and Hex Viewer." />
-        <meta name="keywords" content="cybersecurity tools, steganography, hash tools, base64 decode, jwt decoder, hex viewer, online" />
+        <meta name="description" content="CyberTools: Free and open-source cybersecurity tools for everyone." />
+        <meta name="keywords" content="cybersecurity, tools, hex viewer, base64, steganography, rc4, jwt decoder" />
         <meta name="author" content="RlxChap2" />
 
-        <!-- Open Graph -->
-        <meta property="og:title" content="Cyber Tools" />
-        <meta property="og:description" content="Free cybersecurity tools like Steganography, Hash Tools, Base64, JWT Decoder, and Hex Viewer." />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://github.com/RlxChap2/CyberTools" />
-        <meta property="og:image" content="https://github.com/RlxChap2/CyberTools" />
-
-        <!-- TailwindCSS -->
         <script src="https://cdn.tailwindcss.com"></script>
     </head>
-    <body class="bg-gray-100 text-gray-800">
-        <!-- Header / Navbar -->
-        <header class="bg-white shadow-sm sticky top-0 z-50">
-            <div class="max-w-6xl mx-auto flex justify-between items-center p-4">
-                <a href="/CyberTools"><h1 class="text-xl font-bold text-blue-700">CyberTools</h1></a>
-                <nav class="space-x-2">
-                    <a href="tools/steganography/index.html" class="px-3 py-1 rounded-md text-gray-600 hover:bg-gray-100">Steganography</a>
-                    <a href="tools/base64/index.html" class="px-3 py-1 rounded-md text-gray-600 hover:bg-gray-100">Base64</a>
-                    <a href="tools/jwt-decoder/index.html" class="px-3 py-1 rounded-md text-gray-600 hover:bg-gray-100">JWT Decoder</a>
-                    <a href="tools/hex-viewer/index.html" class="px-3 py-1 rounded-md text-gray-600 hover:bg-gray-100">Hex Viewer</a>
+    <body class="bg-gray-50 text-gray-800 font-sans">
+        <!-- Navbar -->
+        <header class="bg-white shadow sticky top-0 z-50">
+            <div class="max-w-7xl mx-auto flex justify-between items-center p-4">
+                <a href="/CyberTools" class="text-2xl font-bold text-blue-600 hover:text-blue-700 transition">CyberTools</a>
+                <nav class="space-x-3">
+                    <a href="tools/steganography/index.html" class="px-3 py-1 rounded-md hover:bg-gray-100 transition">Steganography</a>
+                    <a href="tools/base64/index.html" class="px-3 py-1 rounded-md hover:bg-gray-100 transition">Base64</a>
+                    <a href="tools/jwt-decoder/index.html" class="px-3 py-1 rounded-md hover:bg-gray-100 transition">JWT Decoder</a>
+                    <a href="tools/hex-viewer/index.html" class="px-3 py-1 rounded-md hover:bg-gray-100 transition">Hex Viewer</a>
+                    <a href="tools/rc4/index.html" class="px-3 py-1 rounded-md hover:bg-gray-100 transition">RC4</a>
                 </nav>
             </div>
         </header>
 
-        <!-- Main Content -->
-        <main class="max-w-6xl mx-auto p-6">
-            <h2 class="text-2xl font-bold mb-4">Welcome to Cyber Tools</h2>
-            <p class="mb-6 text-gray-600">Choose the tool you need from the list below:</p>
+        <!-- Hero Section -->
+        <section class="bg-gradient-to-r from-blue-600 to-blue-400 text-white py-24">
+            <div class="max-w-4xl mx-auto text-center px-4">
+                <h1 class="text-4xl md:text-5xl font-extrabold mb-4">CyberTools</h1>
+                <p class="text-lg md:text-xl text-white/90 mb-6">
+                    All essential cybersecurity tools in one place.
+                    <span class="font-semibold">Free for everyone, designed by me.</span>
+                </p>
+                <div class="flex justify-center gap-4">
+                    <a href="#tools" class="bg-white text-blue-600 font-semibold px-6 py-3 rounded-lg shadow hover:bg-gray-100 transition">Explore Tools</a>
+                    <a href="https://github.com/RlxChap2/CyberTools/" target="_blank" class="bg-blue-700 text-white font-semibold px-6 py-3 rounded-lg shadow hover:bg-blue-800 transition">GitHub Repo</a>
+                </div>
+            </div>
+        </section>
 
-            <div class="grid gap-6 md:grid-cols-3">
-                <!-- Cards -->
-                <a href="tools/steganography/index.html" class="bg-white rounded-xl shadow p-6 hover:shadow-lg transition">
-                    <h3 class="font-semibold text-lg mb-2">Steganography</h3>
-                    <p class="text-gray-500">Hide and extract messages from images.</p>
+        <!-- Tools Grid -->
+        <section id="tools" class="max-w-7xl mx-auto py-16 px-4">
+            <h2 class="text-3xl font-bold text-gray-800 mb-10 text-center">Available Tools</h2>
+            <div class="grid gap-8 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+                <a href="tools/steganography/index.html" class="bg-white rounded-xl shadow-md p-6 hover:shadow-xl transition transform hover:-translate-y-1">
+                    <div class="text-5xl mb-4">🖼️</div>
+                    <h3 class="font-semibold text-xl mb-2">Steganography</h3>
+                    <p class="text-gray-500 text-sm">Hide and extract messages from images easily.</p>
                 </a>
 
-                <a href="tools/hash-tools/index.html" class="bg-white rounded-xl shadow p-6 hover:shadow-lg transition">
-                    <h3 class="font-semibold text-lg mb-2">Hash Tools</h3>
-                    <p class="text-gray-500">Generate and identify hash values.</p>
+                <a href="tools/hash-tools/index.html" class="bg-white rounded-xl shadow-md p-6 hover:shadow-xl transition transform hover:-translate-y-1">
+                    <div class="text-5xl mb-4">🔒</div>
+                    <h3 class="font-semibold text-xl mb-2">Hash Tools</h3>
+                    <p class="text-gray-500 text-sm">Generate and verify hash values of any file or text.</p>
                 </a>
 
-                <a href="tools/encoding-utils/index.html" class="bg-white rounded-xl shadow p-6 hover:shadow-lg transition">
-                    <h3 class="font-semibold text-lg mb-2">Encoding Utils</h3>
-                    <p class="text-gray-500">Convert text with Base64, URL, Hex, and more.</p>
+                <a href="tools/base64/index.html" class="bg-white rounded-xl shadow-md p-6 hover:shadow-xl transition transform hover:-translate-y-1">
+                    <div class="text-5xl mb-4">🔡</div>
+                    <h3 class="font-semibold text-xl mb-2">Base64 & Encoding</h3>
+                    <p class="text-gray-500 text-sm">Encode and decode text with Base64, URL, and Hex formats.</p>
                 </a>
 
-                <a href="tools/jwt-decoder/index.html" class="bg-white rounded-xl shadow p-6 hover:shadow-lg transition">
-                    <h3 class="font-semibold text-lg mb-2">JWT Decoder</h3>
-                    <p class="text-gray-500">Decode and inspect JWT tokens.</p>
+                <a href="tools/jwt-decoder/index.html" class="bg-white rounded-xl shadow-md p-6 hover:shadow-xl transition transform hover:-translate-y-1">
+                    <div class="text-5xl mb-4">📝</div>
+                    <h3 class="font-semibold text-xl mb-2">JWT Decoder</h3>
+                    <p class="text-gray-500 text-sm">Decode and inspect JWT tokens safely.</p>
                 </a>
 
-                <a href="tools/hex-viewer/index.html" class="bg-white rounded-xl shadow p-6 hover:shadow-lg transition">
-                    <h3 class="font-semibold text-lg mb-2">Hex Viewer</h3>
-                    <p class="text-gray-500">View file contents in hexadecimal format.</p>
+                <a href="tools/hex-viewer/index.html" class="bg-white rounded-xl shadow-md p-6 hover:shadow-xl transition transform hover:-translate-y-1">
+                    <div class="text-5xl mb-4">📄</div>
+                    <h3 class="font-semibold text-xl mb-2">Hex Viewer / Editor</h3>
+                    <p class="text-gray-500 text-sm">View and edit files in hexadecimal and ASCII formats.</p>
+                </a>
+
+                <a href="tools/rc4/index.html" class="bg-white rounded-xl shadow-md p-6 hover:shadow-xl transition transform hover:-translate-y-1">
+                    <div class="text-5xl mb-4">🛡️</div>
+                    <h3 class="font-semibold text-xl mb-2">RC4 Encryption</h3>
+                    <p class="text-gray-500 text-sm">Encrypt and decrypt text or files using RC4 algorithm.</p>
                 </a>
             </div>
-        </main>
+        </section>
+
+        <!-- Free & Open Source Info -->
+        <section class="bg-blue-50 py-12">
+            <div class="max-w-4xl mx-auto text-center px-4">
+                <h2 class="text-2xl font-bold mb-4 text-blue-700">Completely Free & Open Source</h2>
+                <p class="text-gray-600 text-lg">
+                    CyberTools is fully free to use for everyone and designed by
+                    <span class="font-semibold">RlxChap2</span> aka <span class="font-semibold">0xR1A7</span>. Explore, learn, and share!
+                    <a href="https://github.com/RlxChap2/CyberTools/" target="_blank" class="text-blue-600 hover:underline">View on GitHub</a>
+                </p>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="bg-gray-900 text-gray-200 py-8 mt-20">
+            <div class="max-w-7xl mx-auto text-center px-4">
+                <p>&copy; 2025 CyberTools. Made with ❤️ by <a href="https://github.com/RlxChap2" class="text-blue-500 hover:underline">RlxChap2</a></p>
+                <p class="mt-2 text-gray-400 text-sm">Open-source cybersecurity tools for everyone. <a href="https://github.com/RlxChap2/CyberTools/" class="text-blue-400 hover:underline">GitHub Repo</a></p>
+            </div>
+        </footer>
     </body>
 </html>
