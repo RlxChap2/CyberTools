@@ -2,26 +2,16 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8" />
-        <title>CyberTools - Hex Viewer Online</title>
+        <title>CyberTools - Hex Editor Online</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="shortcut icon" href="../../assets/logowb.png" type="image/x-icon" />
 
-        <!-- SEO Meta -->
-        <meta name="description" content="Free online Hex Viewer: Upload any file and view its hexadecimal and ASCII representation directly in your browser. Fast, simple, and open-source." />
-        <meta name="keywords" content="hex viewer, online hex editor, file inspector, binary viewer, ascii viewer, cybersecurity tools" />
+        <meta name="description" content="Edit files in Hex and ASCII directly in your browser. Save changes and download modified files." />
+        <meta name="keywords" content="hex editor, online hex editor, file editor, ascii editor, cybersecurity" />
         <meta name="author" content="RlxChap2" />
 
-        <!-- Open Graph -->
-        <meta property="og:title" content="CyberTools - Hex Viewer Online" />
-        <meta property="og:description" content="Inspect files in hexadecimal and ASCII format directly in your browser with CyberTools Hex Viewer." />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://rlxchap2.github.io/CyberTools/tools/hex-viewer/index.html" />
-        <meta property="og:image" content="https://rlxchap2.github.io/CyberTools/assets/logowb.png" />
-
-        <!-- TailwindCSS -->
         <script src="https://cdn.tailwindcss.com"></script>
     </head>
-
     <body class="bg-gray-50 text-gray-900 font-sans">
         <!-- Header -->
         <header class="bg-white shadow-sm sticky top-0 z-50">
@@ -31,7 +21,7 @@
                     <a href="../steganography/index.html" class="px-3 py-1 rounded-md text-gray-600 hover:bg-gray-100">Steganography</a>
                     <a href="../base64/index.html" class="px-3 py-1 rounded-md text-gray-600 hover:bg-gray-100">Base64</a>
                     <a href="../jwt-decoder/index.html" class="px-3 py-1 rounded-md text-gray-600 hover:bg-gray-100">JWT Decoder</a>
-                    <a href="../index.html" class="px-3 py-1 rounded-md text-blue-600 font-semibold">Hex Viewer</a>
+                    <a href="./index.html" class="px-3 py-1 rounded-md text-blue-600 font-semibold">Hex Editor</a>
                     <a href="../rc4/index.html" class="px-3 py-1 rounded-md text-gray-600 hover:bg-gray-100">RC4r</a>
                 </nav>
             </div>
@@ -40,15 +30,16 @@
         <!-- Main -->
         <main class="max-w-6xl mx-auto p-6">
             <section>
-                <h2 class="text-2xl font-semibold mb-6">Hex Viewer Tool</h2>
+                <h2 class="text-2xl font-semibold mb-6">Hex Editor Tool</h2>
 
                 <!-- Upload -->
                 <div class="p-5 bg-white border rounded-xl shadow-sm mb-6">
                     <h3 class="font-medium text-lg mb-3">Upload a File</h3>
                     <input type="file" id="fileInput" class="mb-3 block text-sm" />
+                    <button id="downloadBtn" class="bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded-lg mt-2" disabled>Download Edited File</button>
                 </div>
 
-                <!-- Output -->
+                <!-- Viewer -->
                 <div id="viewerContainer" class="p-5 bg-white border rounded-xl shadow-sm overflow-auto h-[500px] relative">
                     <table class="table-fixed w-full border-collapse text-xs font-mono">
                         <thead class="bg-gray-100 sticky top-0 z-10">
